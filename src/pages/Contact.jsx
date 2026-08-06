@@ -6,7 +6,7 @@ export default function Contact() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    service: "Interview Coach",
+    service: "",
     message: "",
   });
 
@@ -146,22 +146,24 @@ export default function Contact() {
                     />
                   </div>
 
-                  <div className="mb-3">
-                    <label className="form-label small fw-medium text-dark">Interested Service</label>
-                    <select
-                      name="service"
-                      value={formData.service}
-                      onChange={handleChange}
-                      className="form-control rounded-3 py-2 border-secondary-subtle"
-                    >
-                      <option value="Interview Coach">Interview Coach</option>
-                      <option value="CV Review">CV Review</option>
-                      <option value="Versant & English Assessment Strategy">Versant & English Assessment Strategy</option>
-                      <option value="Group Coaching Program">Group Coaching Program</option>
-                      <option value="General Enquiry">General Enquiry</option>
-                    </select>
-                  </div>
-
+<div className="mb-3">
+  <label className="form-label small fw-medium text-dark">Interested Service</label>
+  <select
+    name="service"
+    value={formData.service}
+    onChange={handleChange}
+    className="form-select rounded-3 py-2 border-secondary-subtle"
+  >
+    {/* خيار افتراضي كعنوان للقائمة */}
+    <option value="" disabled hidden>Select a service...</option>
+    
+    <option value="Interview Coach">Interview Coach</option>
+    <option value="CV Review">CV Review</option>
+    <option value="Versant & English Assessment Strategy">Versant & English Assessment Strategy</option>
+    <option value="Group Coaching Program">Group Coaching Program</option>
+    <option value="General Enquiry">General Enquiry</option>
+  </select>
+</div>
                   <div className="mb-4">
                     <label className="form-label small fw-medium text-dark">Message / Interview Details</label>
                     <textarea
