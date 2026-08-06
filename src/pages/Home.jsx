@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import { ArrowUpRight, Mic, FileText, Briefcase, Users } from "lucide-react";
 import Eyebrow from "../components/Eyebrow";
 import Badge from "../components/Badge";
@@ -10,7 +11,9 @@ import { YoutubeIcon } from "../data/siteData";
 
 import heroImg from "../assets/images/hero-banner.jpg";
 
-export default function Home({ setPage }) {
+export default function Home() {
+  const navigate = useNavigate();
+
   return (
     <div>
       {/* HERO BANNER - FULL WIDTH */}
@@ -37,7 +40,7 @@ export default function Home({ setPage }) {
               I help job seekers clear BPO and customer service interviews — HR rounds, operational rounds, and Versant/English assessments — using real playbooks from inside Sutherland, Teleperformance, and Concentrix.
             </p>
             <div className="d-flex flex-wrap gap-3 mb-4">
-              <PrimaryButton onClick={() => setPage("contact")}>
+              <PrimaryButton onClick={() => navigate("/contact")}>
                 Book an interview coach session <ArrowUpRight size={16} />
               </PrimaryButton>
               <GhostButton href="https://www.youtube.com/@Ahmed.Moussa206">
@@ -117,7 +120,7 @@ export default function Home({ setPage }) {
             1:1 mock interviews for HR and operational rounds, personalized feedback with the STAR method, and dedicated Versant/English assessment coaching.
           </p>
           <button
-            onClick={() => setPage("services")}
+            onClick={() => navigate("/services")}
             className="btn rounded-pill px-4 py-3 fw-medium d-inline-flex align-items-center gap-2"
             style={{ backgroundColor: "#D9A441", color: "#12211F" }}
           >

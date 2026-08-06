@@ -1,7 +1,11 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { NAV_ITEMS, SOCIALS } from "../data/siteData";
 
-export default function Footer({ setPage }) {
+export default function Footer() {
+  // دالة لتحويل id العنصر إلى مسار URL المناسب
+  const getPath = (id) => (id === "home" ? "/" : `/${id}`);
+
   return (
     <footer className="bg-dark text-light border-top border-secondary pt-5">
       <div className="container py-4">
@@ -17,14 +21,14 @@ export default function Footer({ setPage }) {
             <div className="font-mono text-uppercase text-warning small mb-3">Navigate</div>
             <div className="d-flex flex-column gap-2">
               {NAV_ITEMS.map((item) => (
-                <button
+                <Link
                   key={item.id}
-                  onClick={() => setPage(item.id)}
-                  className="btn btn-link text-decoration-none text-light text-start p-0 small hover-warning"
+                  to={getPath(item.id)}
+                  className="text-decoration-none text-light text-start small hover-warning"
                   style={{ width: "fit-content" }}
                 >
                   {item.label}
-                </button>
+                </Link>
               ))}
             </div>
           </div>

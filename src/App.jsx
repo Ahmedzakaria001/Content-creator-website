@@ -1,28 +1,47 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
+import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
+
+// Components
 import Nav from "./components/Nav";
 import Footer from "./components/Footer";
+
+// Pages
 import Home from "./pages/Home";
-import About from "./pages/About";
 import Services from "./pages/Services";
+import About from "./pages/About";
 import Contact from "./pages/Contact";
 
-export default function App() {
-  const [page, setPage] = useState("home");
+// Styles (تم تصحيح المسار ليكون داخل assets)
+import "./assets/styles/custom.css";
+import "./App.css";
+
+// Scroll to top helper component
+function ScrollToTop() {
+  const { pathname } = useLocation();
 
   useEffect(() => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  }, [page]);
+    window.scrollTo(0, 0);
+  }, [pathname]);
 
+  return null;
+}
+
+export default function App() {
   return (
-    <div className="d-flex flex-column min-vh-100">
-      <Nav page={page} setPage={setPage} />
-      <main className="flex-grow-1">
-        {page === "home" && <Home setPage={setPage} />}
-        {page === "about" && <About />}
-        {page === "services" && <Services setPage={setPage} />}
-        {page === "contact" && <Contact />}
-      </main>
-      <Footer setPage={setPage} />
-    </div>
+    <Router>
+      <ScrollToTop />
+      <div className="d-flex flex-column min-vh-100">
+        <Nav />
+        <main className="flex-grow-1">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/services" element={<Services />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
+          </Routes>
+        </main>
+        <Footer />
+      </div>
+    </Router>
   );
 }
