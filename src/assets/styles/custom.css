@@ -1,0 +1,228 @@
+:root {
+  --bg-main: #0B0F17;              /* خلفية داكنة فخمة وعميقة */
+  --bg-card: #131B2A;              /* كروت داكنة متباينة */
+  --bg-card-hover: #1A2438;
+  --text-main: #F1F5F9;            /* نصوص فاتحة جداً */
+  --text-muted: #94A3B8;           /* نصوص فرعية هادئة */
+  --accent-amber: #F59E0B;         /* لون ذهبي/كهرماني راقي للأزرار والتفاصيل */
+  --accent-amber-hover: #D97706;
+  --border-color: rgba(255, 255, 255, 0.08); /* حواف خفيفة وشبه شفافة */
+  --border-glow: rgba(245, 158, 11, 0.3);
+}
+
+/* الإعدادات العامة للموقع */
+body, .bg-dark-executive {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background-color: var(--bg-main) !important;
+  color: var(--text-main) !important;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* العناوين والخطوط */
+.font-serif, h1, h2, h3, h4, .display-4, .display-6 {
+  font-family: 'Space Grotesk', sans-serif !important;
+  letter-spacing: -0.03em;
+  color: #FFFFFF !important;
+  font-weight: 700;
+}
+
+.font-mono {
+  font-family: 'IBM Plex Mono', monospace !important;
+}
+
+/* نصوص التوضيح والقوائم */
+.text-secondary, .text-muted, p.lead {
+  color: var(--text-muted) !important;
+}
+
+.text-dark {
+  color: #FFFFFF !important;
+}
+
+/* Navbar */
+.navbar {
+  background-color: rgba(11, 15, 23, 0.85) !important;
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.nav-link {
+  color: var(--text-muted) !important;
+  transition: color 0.2s ease;
+}
+
+.nav-link:hover, .nav-link.active {
+  color: var(--accent-amber) !important;
+}
+
+/* الأزرار الرئيسية */
+.btn-custom-primary {
+  background-color: var(--accent-amber);
+  color: #0B0F17 !important;
+  border-radius: 12px;
+  padding: 0.8rem 1.75rem;
+  font-weight: 700;
+  font-size: 0.95rem;
+  border: none;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  box-shadow: 0 4px 20px rgba(245, 158, 11, 0.25);
+}
+
+.btn-custom-primary:hover {
+  background-color: var(--accent-amber-hover);
+  color: #0B0F17 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(245, 158, 11, 0.4);
+}
+
+/* الأزرار الخفيفة (Ghost Button) */
+.btn-custom-ghost {
+  background-color: rgba(255, 255, 255, 0.04);
+  color: var(--text-main) !important;
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 0.8rem 1.75rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.25s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+}
+
+.btn-custom-ghost:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.2);
+  color: #FFFFFF !important;
+}
+
+/* الوسوم (Badges) */
+.badge-custom {
+  font-family: 'IBM Plex Mono', monospace;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 0.4rem 0.85rem;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--accent-amber);
+  background-color: rgba(245, 158, 11, 0.06);
+  display: inline-block;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* الكروت والتصاميم الزجاجية */
+.card, .bg-white {
+  background-color: var(--bg-card) !important;
+  border: 1px solid var(--border-color) !important;
+  border-radius: 18px !important;
+  transition: all 0.3s ease;
+  color: var(--text-main) !important;
+}
+
+.card:hover {
+  border-color: var(--border-glow) !important;
+  background-color: var(--bg-card-hover) !important;
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* Scorecard styling */
+.scorecard-shadow {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+  padding: 2rem;
+}
+
+.progress {
+  background-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+.progress-bar {
+  background-color: var(--accent-amber) !important;
+}
+
+/* الأقسام والمقاطع */
+.border-top, .border-bottom, .border-secondary-subtle {
+  border-color: var(--border-color) !important;
+}
+
+.text-teal {
+  color: var(--accent-amber) !important;
+}
+
+/* الفوتر Social Icons */
+.social-icon-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  border: 1px solid var(--border-color);
+  background-color: rgba(255, 255, 255, 0.03);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.social-icon-btn:hover {
+  background-color: var(--accent-amber);
+  color: #0B0F17;
+  border-color: var(--accent-amber);
+  transform: translateY(-2px);
+}
+/* ==========================================
+   تجاوب الصور مع الموبايل والتابلت (Responsive Images)
+   ========================================== */
+
+/* 1. ضبط معايير الصور العامة */
+img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* 2. تحسين البانرات الكبيرة (Hero & Services Banners) على الموبايل */
+@media (max-width: 768px) {
+  /* ضبط ارتفاع البانرات على الشاشات الصغيرة */
+  .object-fit-cover {
+    max-height: 250px !important;
+    min-height: 180px !important;
+  }
+
+  /* تحسين المسافات الداخلية للبنرات المدمج بها نصوص */
+  .position-relative.rounded-4 {
+    min-height: 280px !important;
+  }
+
+  .position-relative.z-1 {
+    padding: 1.5rem !important;
+    min-height: 280px !important;
+  }
+
+  /* ضبط حجم العناوين والوجوه داخل البانرات على الشاشات الصغيرة */
+  .display-4, .display-5 {
+    font-size: 1.75rem !important;
+  }
+
+  .lead {
+    font-size: 0.95rem !important;
+  }
+}
+
+/* 3. تحسين التنسيق لشاشات التابلت (Tablet Optimization) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .object-fit-cover {
+    max-height: 350px !important;
+  }
+}
