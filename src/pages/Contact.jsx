@@ -2,8 +2,6 @@ import React, { useState } from "react";
 import { Phone, Mail, MapPin, MessageSquare } from "lucide-react";
 import Eyebrow from "../components/Eyebrow";
 
-import contactImg from "../assets/images/services-desk.jpg";
-
 export default function Contact() {
   const [formData, setFormData] = useState({
     name: "",
@@ -42,7 +40,6 @@ export default function Contact() {
           className="position-relative rounded-4 overflow-hidden border border-secondary-subtle shadow-lg"
           style={{ minHeight: "280px", backgroundColor: "#123A3E" }}
         >
-    
           {/* Gradient Overlay */}
           <div 
             className="position-absolute top-0 start-0 w-100 h-100" 
@@ -77,7 +74,7 @@ export default function Contact() {
             <div className="d-flex flex-column gap-4">
               <div className="d-flex align-items-center gap-3">
                 <div 
-                  className="rounded-circle d-flex align-items-center justify-content-center" 
+                  className="rounded-circle d-flex align-items-center justify-content-center flex-shrink-0" 
                   style={{ width: "44px", height: "44px", backgroundColor: "#E6F0F0" }}
                 >
                   <Phone size={20} style={{ color: "#123A3E" }} />
@@ -90,12 +87,12 @@ export default function Contact() {
 
               <div className="d-flex align-items-center gap-3">
                 <div 
-                  className="rounded-circle d-flex align-items-center justify-content-center" 
+                  className="rounded-circle d-flex align-items-center justify-content-center flex-shrink-0" 
                   style={{ width: "44px", height: "44px", backgroundColor: "#E6F0F0" }}
                 >
                   <Mail size={20} style={{ color: "#123A3E" }} />
                 </div>
-                <div>
+                <div className="text-break">
                   <div className="text-muted small">Email</div>
                   <div className="fw-medium text-dark">ahmedmohmedhusseinabdrabo@gmail.com</div>
                 </div>
@@ -103,7 +100,7 @@ export default function Contact() {
 
               <div className="d-flex align-items-center gap-3">
                 <div 
-                  className="rounded-circle d-flex align-items-center justify-content-center" 
+                  className="rounded-circle d-flex align-items-center justify-content-center flex-shrink-0" 
                   style={{ width: "44px", height: "44px", backgroundColor: "#E6F0F0" }}
                 >
                   <MapPin size={20} style={{ color: "#123A3E" }} />
