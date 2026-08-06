@@ -32,7 +32,7 @@ export default function Home() {
       <section className="container py-5 my-md-2">
         <div className="row align-items-center g-5">
           <div className="col-12 col-lg-7">
-            <Eyebrow>Interview Coach · Content Creator · Dubai</Eyebrow>
+            <Eyebrow>Interview Coach · Content Creator </Eyebrow>
             <h1 className="font-serif display-4 fw-medium text-dark mb-3">
               Land the offer.<br />Not just the interview.
             </h1>

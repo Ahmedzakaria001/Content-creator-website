@@ -54,7 +54,7 @@ export default function Footer() {
       </div>
 
       <div className="border-top border-secondary py-3 mt-4 text-center font-mono text-secondary small" style={{ fontSize: "11px" }}>
-        © {new Date().getFullYear()} AHMED MOUSSA — DUBAI, UAE
+        © {new Date().getFullYear()} Eagles. All Rights Reserved. 
       </div>
     </footer>
   );
