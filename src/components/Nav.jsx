@@ -23,7 +23,7 @@ export default function Nav() {
           onClick={() => setIsOpen(false)}
           className="navbar-brand font-serif fs-4 fw-medium text-dark text-decoration-none p-0"
         >
-          Ahmed Moussa
+          AHMED MOUSSA
         </Link>
 
         {/* زر التبديل للموبايل */}
