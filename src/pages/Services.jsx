@@ -202,43 +202,55 @@ export default function Services() {
           </div>
         </div>
 
-        {/* باقي كروت الخدمات */}
+        {/* 📌 باقي كروت الخدمات (تم تعديل الألوان لتوائم الخلفية الداكنة) */}
         <div className="row g-4">
           {SERVICES_DATA.map((s) => (
             <div key={s.title} className="col-12">
-              <div className="card rounded-4 p-4 border bg-white border-secondary-subtle">
-                <div className="card-body">
-                  <div className="row g-4 align-items-start">
+              <div 
+                className="card rounded-4 p-4 border border-secondary-subtle"
+                style={{ backgroundColor: "#111827" }}
+              >
+                <div className="card-body p-0">
+                  <div className="row g-4 align-items-center">
                     <div className="col-auto">
                       <div
-                        className="rounded-circle d-flex align-items-center justify-content-center bg-light"
-                        style={{ width: "48px", height: "48px", color: "#123A3E" }}
+                        className="rounded-circle d-flex align-items-center justify-content-center"
+                        style={{ width: "48px", height: "48px", backgroundColor: "#1f2937", color: "#38bdf8" }}
                       >
                         <s.icon size={22} />
                       </div>
                     </div>
 
                     <div className="col">
-                      {s.tag && <span className="font-mono text-uppercase text-teal small" style={{ color: "#123A3E" }}>{s.tag}</span>}
-                      <h3 className="font-serif fs-3 fw-medium mt-1 mb-2" style={{ color: "#1e293b" }}>{s.title}</h3>
-                      <p className="small mb-3" style={{ color: "#64748b" }}>{s.desc}</p>
+                      {s.tag && (
+                        <span className="font-mono text-uppercase small fw-semibold" style={{ color: "#fbbf24" }}>
+                          {s.tag}
+                        </span>
+                      )}
+                      <h3 className="font-serif fs-3 fw-medium mt-1 mb-2" style={{ color: "#f8fafc" }}>
+                        {s.title}
+                      </h3>
+                      
+                      {/* نص الوصف الداكن تم تحويله إلى فاتح وواضح */}
+                      <p className="small mb-3" style={{ color: "#94a3b8" }}>
+                        {s.desc}
+                      </p>
+
                       <ul className="list-unstyled mb-0">
                         {s.points.map((p) => (
                           <li key={p} className="d-flex align-items-center gap-2 small mb-2">
-                            <CheckCircle2 size={16} className="text-success" />
-                            <span style={{ color: "#334155" }}>{p}</span>
+                            <CheckCircle2 size={16} style={{ color: "#34d399" }} />
+                            <span style={{ color: "#cbd5e1" }}>{p}</span>
                           </li>
                         ))}
                       </ul>
                     </div>
 
-                    <div className="col-12 col-md-auto text-md-end d-flex flex-md-column justify-content-between align-items-center align-items-md-end gap-3 h-100">
-                      <span className="font-mono text-uppercase small" style={{ color: "#64748b" }}>
-                        Contact for pricing
-                      </span>
+                    {/* زر Enquire محاذٍ وموسط بالكامل */}
+                    <div className="col-12 col-md-auto text-center d-flex align-items-center justify-content-center">
                       <button
                         onClick={() => navigate("/contact")}
-                        className="btn btn-custom-primary rounded-pill px-4 py-2 small fw-medium d-inline-flex align-items-center gap-2"
+                        className="btn btn-custom-primary rounded-pill px-4 py-2 small fw-medium d-inline-flex align-items-center justify-content-center gap-2"
                       >
                         Enquire <ArrowUpRight size={14} />
                       </button>
