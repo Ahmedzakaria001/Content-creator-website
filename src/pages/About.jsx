@@ -41,12 +41,18 @@ export default function About() {
       <section className="container py-5 my-2">
         <div className="row g-5 align-items-center">
           <div className="col-12 col-lg-5">
-            <div className="rounded-4 overflow-hidden border border-secondary-subtle p-2 shadow-sm bg-white">
+            {/* حاوية الصورة تأخذ الحجم الكامل للتصميم */}
+            <div className="rounded-4 overflow-hidden border border-secondary-subtle p-0 shadow-sm bg-dark">
               <img 
                 src={aboutImg} 
                 alt="Ahmed Moussa Quote & Philosophy" 
-                className="img-fluid rounded-3 w-100 object-fit-cover"
-                style={{ maxHeight: "700px" }}
+                className="img-fluid rounded-4 w-100 d-block"
+                style={{ 
+                  width: "100%",
+                  height: "100%",
+                  maxHeight: "none",
+                  display: "block"
+                }}
               />
             </div>
           </div>
