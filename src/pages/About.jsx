@@ -4,7 +4,7 @@ import Eyebrow from "../components/Eyebrow";
 import SectionHeading from "../components/SectionHeading";
 import { TIMELINE } from "../data/siteData";
 
-import aboutImg from "../assets/images/about-quote.jpg";
+import aboutImg from "../assets/images/ae060232-adca-415e-a4f9-47155c420f34.jpg";
 
 export default function About() {
   return (
@@ -46,7 +46,7 @@ export default function About() {
                 src={aboutImg} 
                 alt="Ahmed Moussa Quote & Philosophy" 
                 className="img-fluid rounded-3 w-100 object-fit-cover"
-                style={{ maxHeight: "420px" }}
+                style={{ maxHeight: "700px" }}
               />
             </div>
           </div>

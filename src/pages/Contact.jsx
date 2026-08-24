@@ -156,7 +156,7 @@ export default function Contact() {
   >
     {/* خيار افتراضي كعنوان للقائمة */}
     <option value="" disabled hidden>Select a service...</option>
-    
+    <option value=" Initial Consultation">Free Initial Consultation</option>
     <option value="Interview Coach">Interview Coach</option>
     <option value="CV Review">CV Review</option>
     <option value="Versant & English Assessment Strategy">Versant & English Assessment Strategy</option>

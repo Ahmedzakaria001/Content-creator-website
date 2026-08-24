@@ -1,7 +1,7 @@
 import React from "react";
-import { Mic, FileText, Users, Building2, Briefcase } from "lucide-react";
+import { Mic, FileText, Users, Briefcase, MessageSquare } from "lucide-react";
 
-// أيقونة Youtube الصحيحة مع حرف M
+// أيقونة Youtube الصحيحة
 export const YoutubeIcon = (props) => (
   <svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}>
     <path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.56 49.56 0 0 1-16.2 0A2 2 0 0 1 2.5 17" />
@@ -90,11 +90,29 @@ export const TIMELINE = [
 
 export const SERVICES_DATA = [
   {
+    icon: MessageSquare,
+    title: "Free Strategy Consultation",
+    tag: "100% Free",
+    desc: "A complimentary 1-on-1 strategy call to evaluate your current situation, review your goals, and identify the best path forward before committing.",
+    points: [
+      "30-minute 1-on-1 introductory session",
+      "Quick assessment of your CV & interview readiness",
+      "Clear, actionable guidance tailored to your career path",
+    ],
+  },
+  {
     icon: Mic,
     flagship: true,
     title: "Interview Coach",
-    tag: "Flagship service",
+    tag: "50% Off Offer",
     desc: "1:1 mock interview sessions for both HR and operational rounds, tailored to the BPO / customer service role you're targeting.",
+    price: {
+      before: "200 EGP",
+      after: "100 EGP",
+      duration: "1 Hour",
+      international: "خارج مصر: 100 درهم أو 50 دولار للساعة بعد الخصم",
+    },
+    policyNote: "Payment is non-refundable. Please make sure to confirm all details before submitting a request / الدفع غير قابل للإسترداد ويرجى التأكيد قبل إرسال الطلب.",
     points: [
       "Live mock HR and operational round simulations",
       "Personalized feedback using the STAR method",
@@ -119,16 +137,6 @@ export const SERVICES_DATA = [
       "ICF / GROW coaching framework",
       "Recurring group mock interview sessions",
       "Access to a 100-question practice bank",
-    ],
-  },
-  {
-    icon: Building2,
-    title: "Corporate / B2B Training",
-    desc: "Customer service workshops for companies looking to raise the bar on their frontline and support teams.",
-    points: [
-      "Workshops tailored to your team's context",
-      "Drawn from multinational BPO best practice",
-      "Available on-site or remote",
     ],
   },
 ];

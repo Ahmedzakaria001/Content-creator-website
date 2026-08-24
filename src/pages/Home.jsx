@@ -66,7 +66,7 @@ export default function Home() {
         <div className="container">
           <div className="row g-4 text-center text-sm-start">
             {[
-              ["32,000+", "Followers across YouTube, TikTok & Instagram"],
+              ["41,000+", "Followers across YouTube, TikTok , Instagram & Lindkedin"],
               ["4+ yrs", "Multinational customer service experience"],
               ["1.5 yrs", "UAE healthcare customer happiness"],
               ["390+ hrs", "Clinical psychology training"],
