@@ -95,9 +95,10 @@ export const SERVICES_DATA = [
     tag: "100% Free",
     desc: "A complimentary 1-on-1 strategy call to evaluate your current situation, review your goals, and identify the best path forward before committing.",
     points: [
-      "30-minute 1-on-1 introductory session",
-      "Quick assessment of your CV & interview readiness",
-      "Clear, actionable guidance tailored to your career path",
+      "30-minute 1-on-1 introductory session ",
+      "Quick assessment of your interview readiness and career goals ",
+      "Mock interview with live feedback and practical tips",
+      "Personalized guidance to help you upskill and grow, tailored to your career path",
     ],
   },
   {
@@ -132,11 +133,11 @@ export const SERVICES_DATA = [
   {
     icon: Users,
     title: "Group Coaching Program",
-    desc: "A 6-month interview coaching roadmap for job seekers who want structured, ongoing preparation rather than a single session.",
+    desc: "A structured coaching framework combining live mock interviews, applied psychology, and ongoing practice  built on 6+ months of live interview coaching on TikTok.",
     points: [
-      "ICF / GROW coaching framework",
-      "Recurring group mock interview sessions",
-      "Access to a 100-question practice bank",
+      "Live mock interview experience hosted 6+ months of public mock interviews and coaching sessions on TikTok Live",
+      "Coaching grounded in applied psychology principles",
+      "Structured 6-month roadmap  now opening as a private, 1-on-1/small-group program",
     ],
   },
 ];

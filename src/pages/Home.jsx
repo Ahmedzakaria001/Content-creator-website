@@ -18,12 +18,19 @@ export default function Home() {
     <div>
       {/* HERO BANNER - FULL WIDTH */}
       <div className="container pt-4">
-        <div className="rounded-4 overflow-hidden border border-secondary-subtle shadow-lg">
+        <div 
+          className="rounded-4 overflow-hidden border border-secondary-subtle shadow-lg p-1"
+          style={{ backgroundColor: "#090a0f" }}
+        >
           <img 
             src={heroImg} 
             alt="Ahmed Moussa Hero Banner" 
-            className="img-fluid w-100 object-fit-cover"
-            style={{ maxHeight: "500px", minHeight: "260px" }}
+            className="img-fluid rounded-3 w-100 d-block"
+            style={{ 
+              width: "100%",
+              height: "auto",
+              objectFit: "contain"
+            }}
           />
         </div>
       </div>
