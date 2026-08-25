@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Phone, Mail, MapPin, MessageSquare } from "lucide-react";
-import Turnstile from "react-turnstile";
+import { Turnstile } from "@marsidev/react-turnstile";
 import Eyebrow from "../components/Eyebrow";
 
 export default function Contact() {
@@ -236,8 +236,8 @@ export default function Contact() {
                   {/* Cloudflare Turnstile Component */}
                   <div className="mb-4 d-flex justify-content-center">
                     <Turnstile
-                      sitekey="0x4AAAAAAEcBjAQ9UMY2OD8u"
-                      onVerify={(token) => setTurnstileToken(token)}
+                      siteKey="0x4AAAAAAEcBjAQ9UMY2OD8u"
+                      onSuccess={(token) => setTurnstileToken(token)}
                     />
                   </div>
 
