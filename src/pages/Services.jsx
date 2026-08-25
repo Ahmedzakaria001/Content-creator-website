@@ -63,7 +63,7 @@ export default function Services() {
               </p>
             </div>
 
-            {/* Local Rate (Egypt) */}
+            {/* Local Rate (Egypt) - تم تعديل لون السعر للتناسق */}
             <div className="col-md-6 col-lg-4">
               <div 
                 className="p-4 rounded-4 h-100" 
@@ -74,7 +74,7 @@ export default function Services() {
                   <h5 className="mb-0 fw-bold" style={{ color: "#e5e7eb" }}>Local Rate (Egypt)</h5>
                 </div>
                 <div className="d-flex align-items-baseline gap-2 mt-3">
-                  <span className="fs-3 fw-bold" style={{ color: "#34d399" }}>100 EGP</span>
+                  <span className="fs-3 fw-bold" style={{ color: "#38bdf8" }}>100 EGP</span>
                   <span className="text-decoration-line-through small" style={{ color: "#6b7280" }}>200 EGP</span>
                 </div>
                 <p className="small mt-2 mb-0 d-flex align-items-center gap-1" style={{ color: "#9ca3af" }}>
@@ -173,14 +173,14 @@ export default function Services() {
               </div>
             </div>
 
-            {/* Guide 2: Sales Guide */}
+            {/* Guide 2: Sales Guide - تم تعديل لون الزر للأزرق المحيطي */}
             <div className="col-md-6">
               <div 
                 className="p-4 rounded-4 h-100 d-flex flex-column justify-content-between"
                 style={{ backgroundColor: "#1e293b", border: "1px solid #334155" }}
               >
                 <div>
-                  <div className="d-flex align-items-center gap-2 mb-3" style={{ color: "#34d399" }}>
+                  <div className="d-flex align-items-center gap-2 mb-3" style={{ color: "#38bdf8" }}>
                     <FileText size={22} />
                     <h5 className="mb-0 fw-bold" style={{ color: "#f1f5f9" }}>B2C Sales Guide for Beginners</h5>
                   </div>
@@ -193,7 +193,7 @@ export default function Services() {
                   download="B2C_Sales_Guide_Ahmed_Moussa.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn btn-outline-success rounded-pill px-4 py-2 small fw-medium d-inline-flex align-items-center gap-2 me-auto mt-2"
+                  className="btn btn-outline-info rounded-pill px-4 py-2 small fw-medium d-inline-flex align-items-center gap-2 me-auto mt-2"
                 >
                   <Download size={16} /> Download Sales Guide (PDF)
                 </a>
@@ -202,7 +202,7 @@ export default function Services() {
           </div>
         </div>
 
-        {/* 📌 باقي كروت الخدمات (تم تعديل الألوان لتوائم الخلفية الداكنة) */}
+        {/* 📌 كروت الخدمات - تم تغيير أيقونات الـ CheckCircle2 إلى #38bdf8 */}
         <div className="row g-4">
           {SERVICES_DATA.map((s) => (
             <div key={s.title} className="col-12">
@@ -231,7 +231,6 @@ export default function Services() {
                         {s.title}
                       </h3>
                       
-                      {/* نص الوصف الداكن تم تحويله إلى فاتح وواضح */}
                       <p className="small mb-3" style={{ color: "#94a3b8" }}>
                         {s.desc}
                       </p>
@@ -239,14 +238,13 @@ export default function Services() {
                       <ul className="list-unstyled mb-0">
                         {s.points.map((p) => (
                           <li key={p} className="d-flex align-items-center gap-2 small mb-2">
-                            <CheckCircle2 size={16} style={{ color: "#34d399" }} />
+                            <CheckCircle2 size={16} style={{ color: "#38bdf8" }} />
                             <span style={{ color: "#cbd5e1" }}>{p}</span>
                           </li>
                         ))}
                       </ul>
                     </div>
 
-                    {/* زر Enquire محاذٍ وموسط بالكامل */}
                     <div className="col-12 col-md-auto text-center d-flex align-items-center justify-content-center">
                       <button
                         onClick={() => navigate("/contact")}
