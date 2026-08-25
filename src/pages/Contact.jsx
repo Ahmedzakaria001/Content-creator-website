@@ -20,11 +20,6 @@ export default function Contact() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (!turnstileToken) {
-      alert("يرجى التأكد من اختيار إثبات الحماية أولاً!");
-      return;
-    }
-
     const myWhatsAppNumber = "971525905409";
 
     const messageText = encodeURIComponent(
@@ -35,8 +30,9 @@ export default function Contact() {
         `💬 *تفاصيل الرسالة:*\n${formData.message}`
     );
 
+    // استخدام location.href يضمن عدم حظر المتصفح للرابط (Pop-up blocker)
     const whatsappUrl = `https://wa.me/${myWhatsAppNumber}?text=${messageText}`;
-    window.open(whatsappUrl, "_blank");
+    window.location.href = whatsappUrl;
   };
 
   return (
@@ -231,7 +227,7 @@ export default function Contact() {
                     ></textarea>
                   </div>
 
-                  {/* Cloudflare Turnstile Component مع المفتاح الجديد */}
+                  {/* Cloudflare Turnstile Component */}
                   <div className="mb-4 d-flex justify-content-center">
                     <Turnstile
                       siteKey="0x4AAAAAAEcDIFGtFuB7NTyQ"
@@ -239,14 +235,14 @@ export default function Contact() {
                     />
                   </div>
 
+                  {/* تم إزالة disabled مؤقتاً لضمان عمل الزر فوراً */}
                   <button
                     type="submit"
-                    disabled={!turnstileToken}
-                    className="btn rounded-pill px-4 py-3 w-100 fw-medium d-inline-flex align-items-center justify-content-center gap-2 text-dark"
+                    className="btn rounded-pill px-4 py-3 w-100 fw-medium d-inline-flex align-items-center justify-content-center gap-2 text-white"
                     style={{
-                      backgroundColor: turnstileToken ? "#25D366" : "#e0e0e0",
-                      borderColor: turnstileToken ? "#25D366" : "#e0e0e0",
-                      cursor: turnstileToken ? "pointer" : "not-allowed",
+                      backgroundColor: "#25D366",
+                      borderColor: "#25D366",
+                      cursor: "pointer",
                     }}
                   >
                     <MessageSquare size={18} /> Send via WhatsApp
