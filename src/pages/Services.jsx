@@ -63,7 +63,7 @@ export default function Services() {
               </p>
             </div>
 
-            {/* Local Rate (Egypt) - تم تعديل لون السعر للتناسق */}
+            {/* Local Rate (Egypt) */}
             <div className="col-md-6 col-lg-4">
               <div 
                 className="p-4 rounded-4 h-100" 
@@ -173,7 +173,7 @@ export default function Services() {
               </div>
             </div>
 
-            {/* Guide 2: Sales Guide - تم تعديل لون الزر للأزرق المحيطي */}
+            {/* Guide 2: Sales Guide */}
             <div className="col-md-6">
               <div 
                 className="p-4 rounded-4 h-100 d-flex flex-column justify-content-between"
@@ -202,7 +202,7 @@ export default function Services() {
           </div>
         </div>
 
-        {/* 📌 كروت الخدمات - تم تغيير أيقونات الـ CheckCircle2 إلى #38bdf8 */}
+        {/* 📌 كروت الخدمات (مع تحسين محاذاة الأيقونات مع أول سطر) */}
         <div className="row g-4">
           {SERVICES_DATA.map((s) => (
             <div key={s.title} className="col-12">
@@ -237,8 +237,8 @@ export default function Services() {
 
                       <ul className="list-unstyled mb-0">
                         {s.points.map((p) => (
-                          <li key={p} className="d-flex align-items-center gap-2 small mb-2">
-                            <CheckCircle2 size={16} style={{ color: "#38bdf8" }} />
+                          <li key={p} className="d-flex align-items-start gap-2 small mb-2">
+                            <CheckCircle2 size={16} className="mt-1 flex-shrink-0" style={{ color: "#38bdf8" }} />
                             <span style={{ color: "#cbd5e1" }}>{p}</span>
                           </li>
                         ))}
