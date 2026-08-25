@@ -11,7 +11,6 @@ export default function Contact() {
     message: "",
   });
 
-  // حالة لتخزين الـ Token الخاص بـ Turnstile
   const [turnstileToken, setTurnstileToken] = useState("");
 
   const handleChange = (e) => {
@@ -28,7 +27,6 @@ export default function Contact() {
 
     const myWhatsAppNumber = "971525905409";
 
-    // تجهيز نص الرسالة وتنسيقها
     const messageText = encodeURIComponent(
       `📌 *طلب استشارة / حجز جديد من الموقع*\n\n` +
         `👤 *الاسم:* ${formData.name}\n` +
@@ -233,10 +231,10 @@ export default function Contact() {
                     ></textarea>
                   </div>
 
-                  {/* Cloudflare Turnstile Component */}
+                  {/* Cloudflare Turnstile Component مع المفتاح الجديد */}
                   <div className="mb-4 d-flex justify-content-center">
                     <Turnstile
-                      siteKey="0x4AAAAAAEcBjAQ9UMY2OD8u"
+                      siteKey="0x4AAAAAAEcDIFGtFuB7NTyQ"
                       onSuccess={(token) => setTurnstileToken(token)}
                     />
                   </div>
