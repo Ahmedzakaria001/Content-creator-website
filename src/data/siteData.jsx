@@ -105,15 +105,7 @@ export const SERVICES_DATA = [
     icon: Mic,
     flagship: true,
     title: "Interview Coach",
-    tag: "50% Off Offer",
     desc: "1:1 mock interview sessions for both HR and operational rounds, tailored to the BPO / customer service role you're targeting.",
-    price: {
-      before: "200 EGP",
-      after: "100 EGP",
-      duration: "1 Hour",
-      international: "خارج مصر: 100 درهم أو 50 دولار للساعة بعد الخصم",
-    },
-    policyNote: "Payment is non-refundable. Please make sure to confirm all details before submitting a request / الدفع غير قابل للإسترداد ويرجى التأكيد قبل إرسال الطلب.",
     points: [
       "Live mock HR and operational round simulations",
       "Personalized feedback using the STAR method",
@@ -133,11 +125,11 @@ export const SERVICES_DATA = [
   {
     icon: Users,
     title: "Group Coaching Program",
-    desc: "A structured coaching framework combining live mock interviews, applied psychology, and ongoing practice  built on 6+ months of live interview coaching on TikTok.",
+    desc: "A structured coaching framework combining live mock interviews, applied psychology, and ongoing practice built on 6+ months of live interview coaching on TikTok.",
     points: [
       "Live mock interview experience hosted 6+ months of public mock interviews and coaching sessions on TikTok Live",
       "Coaching grounded in applied psychology principles",
-      "Structured 6-month roadmap  now opening as a private, 1-on-1/small-group program",
+      "Structured 6-month roadmap now opening as a private, 1-on-1/small-group program",
     ],
   },
 ];

@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import { CheckCircle2, ArrowUpRight, AlertTriangle, Clock, Globe, CreditCard, Download, FileText, Sparkles } from "lucide-react";
+import { CheckCircle2, ArrowUpRight, Download, FileText, Sparkles } from "lucide-react";
 import Eyebrow from "../components/Eyebrow";
 import { SERVICES_DATA } from "../data/siteData";
 
@@ -37,91 +37,7 @@ export default function Services() {
       {/* SERVICES LIST SECTION */}
       <div className="container py-5">
         
-        {/* 📌 الخانة الأولى: تفاصيل الأسعار والسياسات */}
-        <div 
-          className="card rounded-4 p-4 p-md-5 border-0 shadow-sm mb-4"
-          style={{ backgroundColor: "#111827" }}
-        >
-          <div className="row g-4">
-            <div className="col-12 text-center text-md-start">
-              <span 
-                className="badge font-mono text-uppercase px-3 py-2 rounded-pill mb-2 fw-semibold"
-                style={{ 
-                  backgroundColor: "rgba(245, 158, 11, 0.15)", 
-                  color: "#fbbf24", 
-                  border: "1px solid rgba(245, 158, 11, 0.3)" 
-                }}
-              >
-                Session Rates & Terms
-              </span>
-
-              <h3 className="font-serif fs-2 fw-bold mb-1" style={{ color: "#f3f4f6" }}>
-                Pricing & Booking Policy
-              </h3>
-              <p className="small mb-0" style={{ color: "#9ca3af" }}>
-                Transparent rates for both domestic and international applicants.
-              </p>
-            </div>
-
-            {/* Local Rate (Egypt) */}
-            <div className="col-md-6 col-lg-4">
-              <div 
-                className="p-4 rounded-4 h-100" 
-                style={{ backgroundColor: "#1f2937", border: "1px solid #374151" }}
-              >
-                <div className="d-flex align-items-center gap-2 mb-2" style={{ color: "#60a5fa" }}>
-                  <CreditCard size={20} />
-                  <h5 className="mb-0 fw-bold" style={{ color: "#e5e7eb" }}>Local Rate (Egypt)</h5>
-                </div>
-                <div className="d-flex align-items-baseline gap-2 mt-3">
-                  <span className="fs-3 fw-bold" style={{ color: "#38bdf8" }}>100 EGP</span>
-                  <span className="text-decoration-line-through small" style={{ color: "#6b7280" }}>200 EGP</span>
-                </div>
-                <p className="small mt-2 mb-0 d-flex align-items-center gap-1" style={{ color: "#9ca3af" }}>
-                  <Clock size={14} /> Duration: 1 Hour (Limited-time Discount)
-                </p>
-              </div>
-            </div>
-
-            {/* International Rate */}
-            <div className="col-md-6 col-lg-4">
-              <div 
-                className="p-4 rounded-4 h-100" 
-                style={{ backgroundColor: "#1f2937", border: "1px solid #374151" }}
-              >
-                <div className="d-flex align-items-center gap-2 mb-2" style={{ color: "#60a5fa" }}>
-                  <Globe size={20} />
-                  <h5 className="mb-0 fw-bold" style={{ color: "#e5e7eb" }}>International Rates</h5>
-                </div>
-                <div className="mt-3">
-                  <div className="fs-4 fw-bold" style={{ color: "#f3f4f6" }}>100 AED / $50 USD</div>
-                  <p className="small mt-1 mb-0" style={{ color: "#9ca3af" }}>
-                    Per hour rate (after discount) for clients residing outside Egypt.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* Booking Notice */}
-            <div className="col-12 col-lg-4">
-              <div 
-                className="p-4 rounded-4 h-100" 
-                style={{ backgroundColor: "rgba(239, 68, 68, 0.1)", border: "1px solid rgba(239, 68, 68, 0.2)" }}
-              >
-                <div className="d-flex align-items-center gap-2 mb-2" style={{ color: "#f87171" }}>
-                  <AlertTriangle size={20} />
-                  <h5 className="mb-0 fw-bold" style={{ color: "#f87171" }}>Important Notice</h5>
-                </div>
-                <ul className="small mb-0 ps-3 mt-3" style={{ color: "#fca5a5" }}>
-                  <li className="mb-2"><strong>Payment is strictly non-refundable.</strong></li>
-                  <li>Please double-check your availability and confirm all details before submitting a booking request.</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* 📌 الخانة الثانية: قسم أدلة الـ PDF المجانية المستقلة */}
+        {/* 📌 قسم أدلة الـ PDF المجانية */}
         <div 
           className="card rounded-4 p-4 p-md-5 border-0 shadow-sm mb-5"
           style={{ backgroundColor: "#0f172a" }}
@@ -202,7 +118,7 @@ export default function Services() {
           </div>
         </div>
 
-        {/* 📌 كروت الخدمات (مع تحسين محاذاة الأيقونات مع أول سطر) */}
+        {/* 📌 كروت الخدمات */}
         <div className="row g-4">
           {SERVICES_DATA.map((s) => (
             <div key={s.title} className="col-12">
