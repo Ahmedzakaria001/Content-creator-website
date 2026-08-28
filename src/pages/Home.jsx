@@ -15,20 +15,20 @@ export default function Home() {
 
   return (
     <div>
-      {/* HERO BANNER - FULL WIDTH */}
-      <div className="container pt-4">
+      {/* HERO BANNER - FULL WIDTH ON MOBILE, CONTAINED ON DESKTOP */}
+      <div className="container-fluid container-md pt-0 pt-md-4 px-0 px-md-3">
         <div
-          className="rounded-4 overflow-hidden border border-secondary-subtle shadow-lg p-1"
+          className="rounded-0 rounded-md-4 overflow-hidden border-0 border-md border-secondary-subtle shadow-lg p-0"
           style={{ backgroundColor: "#090a0f" }}
         >
           <img
             src={heroImg}
             alt="Ahmed Moussa Hero Banner"
-            className="img-fluid rounded-3 w-100 d-block"
+            className="w-100 d-block rounded-0 rounded-md-3"
             style={{
               width: "100%",
               height: "auto",
-              objectFit: "contain"
+              objectFit: "cover"
             }}
           />
         </div>
