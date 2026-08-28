@@ -16,25 +16,19 @@ export default function Home() {
 
   return (
     <div>
-      {/* HERO BANNER - FULL IMAGE (NO CROPPING) & MAX WIDTH/HEIGHT */}
-      <div className="container-fluid px-2 px-md-3 pt-3">
-        <div 
-          className="rounded-4 overflow-hidden border border-secondary-subtle shadow-lg p-1"
-          style={{ backgroundColor: "#090a0f" }}
-        >
-          <img 
-            src={heroImg} 
-            alt="Ahmed Moussa Hero Banner" 
-            className="w-100 d-block rounded-3"
-            style={{ 
-              width: "100%",
-              height: "auto",          // 👈 الارتفاع يتحدد تلقائياً حسب العرض لمنع قص الصورة
-              maxHeight: "600px",      // 👈 إتاحة أقصى ارتفاع ممكن
-              objectFit: "contain",     // 👈 إظهار كامل تفاصيل الصورة بدون اقتطاع
-              objectPosition: "center"
-            }}
-          />
-        </div>
+      {/* HERO BANNER - FULL IMAGE WITHOUT CROPPING */}
+      <div className="container-fluid p-0 pt-2">
+        <img 
+          src={heroImg} 
+          alt="Ahmed Moussa Hero Banner" 
+          className="w-100 d-block"
+          style={{ 
+            width: "100%",
+            height: "auto",          // 👈 يتيح للصورة ضبط ارتفاعها تلقائياً بدون قص
+            objectFit: "contain",     // 👈 يضمن ظهور الصورة كاملة من الحافة للحافة
+            objectPosition: "center"
+          }}
+        />
       </div>
 
       {/* HERO CONTENT SECTION */}
