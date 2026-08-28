@@ -8,7 +8,6 @@ import GhostButton from "../components/GhostButton";
 import SectionHeading from "../components/SectionHeading";
 import InterviewScorecard from "../components/InterviewScorecard";
 import { YoutubeIcon } from "../data/siteData";
-
 import heroImg from "../assets/images/hero-banner.jpg";
 
 export default function Home() {
@@ -16,19 +15,23 @@ export default function Home() {
 
   return (
     <div>
-      {/* HERO BANNER - FULL IMAGE WITHOUT CROPPING */}
-      <div className="container-fluid p-0 pt-2">
-        <img 
-          src={heroImg} 
-          alt="Ahmed Moussa Hero Banner" 
-          className="w-100 d-block"
-          style={{ 
-            width: "100%",
-            height: "auto",          // 👈 يتيح للصورة ضبط ارتفاعها تلقائياً بدون قص
-            objectFit: "contain",     // 👈 يضمن ظهور الصورة كاملة من الحافة للحافة
-            objectPosition: "center"
-          }}
-        />
+      {/* HERO BANNER - FULL WIDTH */}
+      <div className="container pt-4">
+        <div
+          className="rounded-4 overflow-hidden border border-secondary-subtle shadow-lg p-1"
+          style={{ backgroundColor: "#090a0f" }}
+        >
+          <img
+            src={heroImg}
+            alt="Ahmed Moussa Hero Banner"
+            className="img-fluid rounded-3 w-100 d-block"
+            style={{
+              width: "100%",
+              height: "auto",
+              objectFit: "contain"
+            }}
+          />
+        </div>
       </div>
 
       {/* HERO CONTENT SECTION */}
