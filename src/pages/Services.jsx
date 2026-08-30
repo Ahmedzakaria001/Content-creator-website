@@ -1,8 +1,54 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import { CheckCircle2, ArrowUpRight, Download, FileText, Sparkles } from "lucide-react";
+import { CheckCircle2, ArrowUpRight, Download, FileText, Sparkles, ExternalLink } from "lucide-react";
 import Eyebrow from "../components/Eyebrow";
 import { SERVICES_DATA } from "../data/siteData";
+
+// قائمة ملفات الـ PDF السبعة
+const PDF_RESOURCES = [
+  {
+    id: 1,
+    title: "25 Empathy Sentences",
+    desc: "Essential customer service empathy phrases and responses.",
+    file: "/pdfs/25_Empathy_Sentences_Ahmed_Moussa.pdf",
+  },
+  {
+    id: 2,
+    title: "B2C Sales Guide for Beginners",
+    desc: "Core principles, cold calling scripts, and handling objections.",
+    file: "/pdfs/B2C_Sales_Guide_Ahmed_Moussa-1.pdf",
+  },
+  {
+    id: 3,
+    title: "BPO Abbreviations Handbook",
+    desc: "Key terminology and acronyms used in multinational call centers.",
+    file: "/pdfs/BPO_Abbreviations_Handbook_Ahmed_Moussa.pdf",
+  },
+  {
+    id: 4,
+    title: "Call Center English Vocabulary",
+    desc: "Essential vocabulary for professional communication in English calls.",
+    file: "/pdfs/Call_Center_English_Vocabulary_Ahmed_Moussa-1.pdf",
+  },
+  {
+    id: 5,
+    title: "Interview Preparation Guide",
+    desc: "Master top 10 questions, model answers, and the STAR method.",
+    file: "/pdfs/Interview_Guide_Ahmed_Moussa.pdf",
+  },
+  {
+    id: 6,
+    title: "Telecom Call Flow Role Play",
+    desc: "Real-world role play scenarios and practical call flow strategies.",
+    file: "/pdfs/Telecom_Call_Flow_Role_Play_Ahmed_Moussa.pdf",
+  },
+  {
+    id: 7,
+    title: "The Psychology of Winning Calls",
+    desc: "Psychological tactics and customer mindset control in phone support.",
+    file: "/pdfs/The_Psychology_of_Winning_Calls_v2_Ahmed_Moussa.pdf",
+  },
+];
 
 export default function Services() {
   const navigate = useNavigate();
@@ -13,7 +59,7 @@ export default function Services() {
       <div className="container pt-4">
         <div 
           className="position-relative rounded-4 overflow-hidden border border-secondary-subtle shadow-lg"
-          style={{ minHeight: "360px", backgroundColor: "#123A3E" }}
+          style={{ minHeight: "220px", backgroundColor: "#123A3E" }}
         >
           <div 
             className="position-absolute top-0 start-0 w-100 h-100" 
@@ -22,9 +68,9 @@ export default function Services() {
             }}
           />
 
-          <div className="position-relative z-1 p-4 p-md-5 d-flex flex-column justify-content-end h-100" style={{ minHeight: "360px" }}>
+          <div className="position-relative z-1 p-4 p-md-4 d-flex flex-column justify-content-center">
             <Eyebrow>Services</Eyebrow>
-            <h1 className="font-serif display-5 fw-medium mb-3" style={{ maxWidth: "650px", color: "#e2e8f0" }}>
+            <h1 className="font-serif display-6 fw-medium mb-2 mt-1" style={{ maxWidth: "650px", color: "#e2e8f0" }}>
               Structured coaching for every stage of getting hired.
             </h1>
             <p className="lead fs-6 mb-0" style={{ maxWidth: "550px", color: "#94a3b8" }}>
@@ -37,13 +83,13 @@ export default function Services() {
       {/* SERVICES LIST SECTION */}
       <div className="container py-5">
         
-        {/* 📌 قسم أدلة الـ PDF المجانية */}
+        {/* 📌 قسم أدلة الـ PDF المجانية (7 ملفات) */}
         <div 
           className="card rounded-4 p-4 p-md-5 border-0 shadow-sm mb-5"
           style={{ backgroundColor: "#0f172a" }}
         >
-          <div className="row g-4 align-items-center">
-            <div className="col-12 text-center text-md-start mb-2">
+          <div className="row g-4 align-items-center mb-2">
+            <div className="col-12 text-center text-md-start">
               <span 
                 className="badge font-mono text-uppercase px-3 py-2 rounded-pill mb-2 fw-semibold"
                 style={{ 
@@ -58,63 +104,48 @@ export default function Services() {
                 Downloadable PDF Resources
               </h3>
               <p className="small mb-0" style={{ color: "#94a3b8" }}>
-                Get instant access to practical interview models and sales frameworks.
+                Get instant access to practical interview models, call center vocabulary, and sales frameworks.
               </p>
             </div>
+          </div>
 
-            {/* Guide 1: Interview Guide */}
-            <div className="col-md-6">
-              <div 
-                className="p-4 rounded-4 h-100 d-flex flex-column justify-content-between"
-                style={{ backgroundColor: "#1e293b", border: "1px solid #334155" }}
-              >
-                <div>
-                  <div className="d-flex align-items-center gap-2 mb-3" style={{ color: "#38bdf8" }}>
-                    <FileText size={22} />
-                    <h5 className="mb-0 fw-bold" style={{ color: "#f1f5f9" }}>Interview Preparation Guide</h5>
-                  </div>
-                  <p className="small mb-3" style={{ color: "#cbd5e1" }}>
-                    Master top 10 interview questions, model answers, the STAR method, and key professional terminology.
-                  </p>
-                </div>
-                <a 
-                  href="/pdfs/Interview_Guide_Ahmed_Moussa.pdf" 
-                  download="Interview_Guide_Ahmed_Moussa.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn btn-outline-info rounded-pill px-4 py-2 small fw-medium d-inline-flex align-items-center gap-2 me-auto mt-2"
+          <div className="row g-4 mt-1">
+            {PDF_RESOURCES.map((pdf) => (
+              <div key={pdf.id} className="col-12 col-md-6 col-lg-4">
+                <div 
+                  className="p-4 rounded-4 h-100 d-flex flex-column justify-content-between"
+                  style={{ backgroundColor: "#1e293b", border: "1px solid #334155" }}
                 >
-                  <Download size={16} /> Download Interview Guide (PDF)
-                </a>
-              </div>
-            </div>
+                  <div>
+                    <div className="d-flex align-items-center gap-2 mb-2" style={{ color: "#38bdf8" }}>
+                      <FileText size={20} className="flex-shrink-0" />
+                      <h5 className="mb-0 fw-bold fs-6" style={{ color: "#f1f5f9" }}>{pdf.title}</h5>
+                    </div>
+                    <p className="small mb-3" style={{ color: "#cbd5e1" }}>
+                      {pdf.desc}
+                    </p>
+                  </div>
 
-            {/* Guide 2: Sales Guide */}
-            <div className="col-md-6">
-              <div 
-                className="p-4 rounded-4 h-100 d-flex flex-column justify-content-between"
-                style={{ backgroundColor: "#1e293b", border: "1px solid #334155" }}
-              >
-                <div>
-                  <div className="d-flex align-items-center gap-2 mb-3" style={{ color: "#38bdf8" }}>
-                    <FileText size={22} />
-                    <h5 className="mb-0 fw-bold" style={{ color: "#f1f5f9" }}>B2C Sales Guide for Beginners</h5>
+                  <div className="d-flex gap-2 pt-2 mt-auto">
+                    <a 
+                      href={pdf.file} 
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="btn btn-sm btn-outline-info rounded-pill px-3 py-1-5 small fw-medium d-inline-flex align-items-center gap-1"
+                    >
+                      View <ExternalLink size={13} />
+                    </a>
+                    <a 
+                      href={pdf.file} 
+                      download
+                      className="btn btn-sm btn-info text-dark rounded-pill px-3 py-1-5 small fw-semibold d-inline-flex align-items-center gap-1"
+                    >
+                      Download <Download size={13} />
+                    </a>
                   </div>
-                  <p className="small mb-3" style={{ color: "#cbd5e1" }}>
-                    Core principles, cold calling scripts, handling customer objections, and actionable daily sales habits.
-                  </p>
                 </div>
-                <a 
-                  href="/pdfs/B2C_Sales_Guide_Ahmed_Moussa-1.pdf" 
-                  download="B2C_Sales_Guide_Ahmed_Moussa.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn btn-outline-info rounded-pill px-4 py-2 small fw-medium d-inline-flex align-items-center gap-2 me-auto mt-2"
-                >
-                  <Download size={16} /> Download Sales Guide (PDF)
-                </a>
               </div>
-            </div>
+            ))}
           </div>
         </div>
 

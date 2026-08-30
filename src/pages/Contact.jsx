@@ -37,11 +37,11 @@ export default function Contact() {
 
   return (
     <div>
-      {/* HERO BANNER WITH OVERLAY & CONTENT */}
+      {/* HERO BANNER SECTION */}
       <div className="container pt-4">
         <div
           className="position-relative rounded-4 overflow-hidden border border-secondary-subtle shadow-lg"
-          style={{ minHeight: "280px", backgroundColor: "#123A3E" }}
+          style={{ minHeight: "220px", backgroundColor: "#123A3E" }}
         >
           {/* Gradient Overlay */}
           <div
@@ -54,12 +54,11 @@ export default function Contact() {
 
           {/* Banner Text */}
           <div
-            className="position-relative z-1 p-4 p-md-5 d-flex flex-column justify-content-end h-100 text-white"
-            style={{ minHeight: "280px" }}
+            className="position-relative z-1 p-4 p-md-4 d-flex flex-column justify-content-center text-white"
           >
             <Eyebrow>Get in Touch</Eyebrow>
             <h1
-              className="font-serif display-5 fw-medium text-white mb-2"
+              className="font-serif display-6 fw-medium text-white mb-2 mt-1"
               style={{ maxWidth: "600px" }}
             >
               Let’s secure your next career move.
@@ -235,7 +234,6 @@ export default function Contact() {
                     />
                   </div>
 
-                  {/* تم إزالة disabled مؤقتاً لضمان عمل الزر فوراً */}
                   <button
                     type="submit"
                     className="btn rounded-pill px-4 py-3 w-100 fw-medium d-inline-flex align-items-center justify-content-center gap-2 text-white"

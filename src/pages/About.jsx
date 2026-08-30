@@ -13,7 +13,7 @@ export default function About() {
       <div className="container pt-4">
         <div 
           className="position-relative rounded-4 overflow-hidden border border-secondary-subtle shadow-lg"
-          style={{ minHeight: "320px", backgroundColor: "#123A3E" }}
+          style={{ minHeight: "220px", backgroundColor: "#123A3E" }}
         >
     
           {/* Gradient Overlay */}
@@ -25,9 +25,9 @@ export default function About() {
           />
 
           {/* Banner Text */}
-          <div className="position-relative z-1 p-4 p-md-5 d-flex flex-column justify-content-end h-100 text-white" style={{ minHeight: "320px" }}>
+          <div className="position-relative z-1 p-4 p-md-4 d-flex flex-column justify-content-center text-white">
             <Eyebrow>About Me</Eyebrow>
-            <h1 className="font-serif display-5 fw-medium text-white mb-2" style={{ maxWidth: "700px" }}>
+            <h1 className="font-serif display-6 fw-medium text-white mb-2 mt-1" style={{ maxWidth: "700px" }}>
               From the call center floor to coaching the next person on it.
             </h1>
             <p className="text-light-50 lead fs-6 mb-0" style={{ maxWidth: "600px", opacity: 0.9 }}>
