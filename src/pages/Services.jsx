@@ -6,47 +6,47 @@ import { SERVICES_DATA } from "../data/siteData";
 
 // قائمة ملفات الـ PDF السبعة
 const PDF_RESOURCES = [
-  {
+ {
     id: 1,
-    title: "25 Empathy Sentences",
-    desc: "Essential customer service empathy phrases and responses.",
-    file: "/pdfs/25_Empathy_Sentences_Ahmed_Moussa.pdf",
-  },
-  {
-    id: 2,
-    title: "B2C Sales Guide for Beginners",
-    desc: "Core principles, cold calling scripts, and handling objections.",
-    file: "/pdfs/B2C_Sales_Guide_Ahmed_Moussa-1.pdf",
-  },
-  {
-    id: 3,
-    title: "BPO Abbreviations Handbook",
-    desc: "Key terminology and acronyms used in multinational call centers.",
-    file: "/pdfs/BPO_Abbreviations_Handbook_Ahmed_Moussa.pdf",
-  },
-  {
-    id: 4,
-    title: "Call Center English Vocabulary",
-    desc: "Essential vocabulary for professional communication in English calls.",
-    file: "/pdfs/Call_Center_English_Vocabulary_Ahmed_Moussa-1.pdf",
-  },
-  {
-    id: 5,
     title: "Interview Preparation Guide",
     desc: "Master top 10 questions, model answers, and the STAR method.",
     file: "/pdfs/Interview_Guide_Ahmed_Moussa.pdf",
   },
   {
-    id: 6,
+    id: 2,
+    title: "Call Center English Vocabulary",
+    desc: "Essential vocabulary for professional communication in English calls.",
+    file: "/pdfs/Call_Center_English_Vocabulary_Ahmed_Moussa-1.pdf",
+  },
+  {
+    id: 3,
     title: "Telecom Call Flow Role Play",
     desc: "Real-world role play scenarios and practical call flow strategies.",
     file: "/pdfs/Telecom_Call_Flow_Role_Play_Ahmed_Moussa.pdf",
   },
   {
-    id: 7,
+    id: 4,
+    title: "25 Empathy Sentences",
+    desc: "Essential customer service empathy phrases and responses.",
+    file: "/pdfs/25_Empathy_Sentences_Ahmed_Moussa.pdf",
+  },
+  {
+    id: 5,
     title: "The Psychology of Winning Calls",
     desc: "Psychological tactics and customer mindset control in phone support.",
     file: "/pdfs/The_Psychology_of_Winning_Calls_v2_Ahmed_Moussa.pdf",
+  },
+  {
+    id: 6,
+    title: "BPO Abbreviations Handbook",
+    desc: "Key terminology and acronyms used in multinational call centers.",
+    file: "/pdfs/BPO_Abbreviations_Handbook_Ahmed_Moussa.pdf",
+  },
+  {
+    id: 7,
+    title: "B2C Sales Guide for Beginners",
+    desc: "Core principles, cold calling scripts, and handling objections.",
+    file: "/pdfs/B2C_Sales_Guide_Ahmed_Moussa-1.pdf",
   },
 ];
 
